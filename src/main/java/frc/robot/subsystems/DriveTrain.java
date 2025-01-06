@@ -4,12 +4,19 @@
 
 package frc.robot.subsystems;
 
+<<<<<<< HEAD
 import com.ctre.phoenix6.hardware.Pigeon2;
 
+=======
+>>>>>>> bceb5b7b3410344b45ec5c8f1445b9b1e60aa4f2
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
 import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
+<<<<<<< HEAD
+=======
+import edu.wpi.first.wpilibj.ADXRS450_Gyro;
+>>>>>>> bceb5b7b3410344b45ec5c8f1445b9b1e60aa4f2
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 import frc.robot.subsystems.Swerve.SwerveModule;
@@ -60,8 +67,14 @@ public class DriveTrain extends SubsystemBase {
   // Module desired states
   SwerveModuleState[] moduleStates;
 
+<<<<<<< HEAD
   // Swerve gyro (pigeon 2)
   private Pigeon2 swerve_gyro = new Pigeon2(Constants.SwerveGyro.SWERVE_GYRO_ID);
+=======
+  // Swerve gyro
+  // To Do: Pass the port
+  private ADXRS450_Gyro swerve_gyro = new ADXRS450_Gyro();
+>>>>>>> bceb5b7b3410344b45ec5c8f1445b9b1e60aa4f2
 
   public DriveTrain() {}
 
@@ -89,7 +102,11 @@ public class DriveTrain extends SubsystemBase {
 
   public void rotate90degrees(boolean clockwise) {
     /*Clockwise if the right joystick's x input is positive, counterclockwise if negative*/
+<<<<<<< HEAD
     double currentAngle = swerve_gyro.getYaw().getValueAsDouble();
+=======
+    double currentAngle = swerve_gyro.getAngle();
+>>>>>>> bceb5b7b3410344b45ec5c8f1445b9b1e60aa4f2
     double targetAngle;
     
     if (clockwise) { // When button A is pressed
